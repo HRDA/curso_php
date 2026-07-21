@@ -60,10 +60,77 @@ $p1->email = "angel.rh@email.com";
 $p2->email = "helen.rr@email.com";
 
 echo "Datos primer persona: \nNombre: {$p1->nombre}.\nEdad: {$p1->edad}.\nEmail: {$p1->email}.\n";
-echo "\nDatos segunda persona: \nNombre: {$p2->nombre}.\nEdad: {$p2->edad}.\nEmail: {$p2->email}.";
+echo "\nDatos segunda persona: \nNombre: {$p2->nombre}.\nEdad: {$p2->edad}.\nEmail: {$p2->email}.\n";
 
 
+echo "";
+
+//lista de tareas
+class Tarea {
+    public string $descripcion;
+    public bool $completada;
+}
+
+$tareas = [];
+
+$tarea1 = new Tarea();
+$tarea2 = new Tarea();
+$tarea3 = new Tarea();
+$tarea4 = new Tarea();
+$tarea5 = new Tarea();
+
+//esta es la solucion que yo di
+$tarea1->descripcion = "Practicar Ingles";
+$tarea1->completada = true;
+$tareas[] = $tarea1;
+
+$tarea2->descripcion = "Practicar PHP";
+$tarea2->completada = false;
+$tareas[] = $tarea2;
+
+$tarea3->descripcion = "Practicar Dodker";
+$tarea3->completada = true;
+$tareas[] = $tarea3;
+
+$tarea4->descripcion = "Practicar Clean Code";
+$tarea4->completada = true;
+$tareas[] = $tarea4;
+
+$tarea5->descripcion = "Practicar POO";
+$tarea5->completada = false;
+$tareas[] = $tarea5;
+
+// 2. Creamos el array de forma mucho más compacta y limpia
+//esta me la dio la IA, y me parece muy interesante
+/*
+$tareas = [
+    new Tarea("Practicar Ingles", true),
+    new Tarea("Practicar PHP", false),
+    new Tarea("Practicar Docker", true),
+    new Tarea("Practicar Clean Code", true),
+    new Tarea("Practicar POO", false)
+];
+*/
+echo "\nTareas realizadas: \n";
+
+foreach($tareas as $tarea) {
+    if ($tarea->completada) {
+        echo "{$tarea->descripcion}\n";
+    }
+}
+
+/*
+echo "\nTareas pendientes: \n";
+foreach($tareas as $tarea) {
+    if (!$tarea->completada){
+        echo "{$tarea->descripcion}\n";
+    }
+}
 
 
+echo "\nTarea realizas: \n";
 
-
+foreach($tareas as $tarea) {
+    echo (!$tarea->completada) ? "{$tarea->descripcion}\n":""; 
+}
+*/
