@@ -70,7 +70,6 @@ $valores = [
     [],
     null,
 ];
-//voy a agregar un true al final jaja
 
 
 foreach ($valores as $valor) {
