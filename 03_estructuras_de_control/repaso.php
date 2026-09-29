@@ -54,6 +54,12 @@ Ejercicio 3: Calificacion con match y condiciones
 Dada $nota = 72, usa match con true para asignar: menos de 50 = "Suspenso", 50-69 = "Aprobado", 70-89 = "Notable", 90+ = "Sobresaliente".
 */
 
+//Notas importantes:
+/*
+El match devuelve un valor y su comparacion es estricta o fuerte.
+En cambio en el switch se presta a errores porque su comparacion es debil
+*/
+
 $nota = 50;
 
 $resultado = match (true) {
