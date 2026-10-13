@@ -1,4 +1,5 @@
 <?php
+
 $curso = "Curso de PHP y Laravel con IA";
 $precio =1500;
 $fecha_inicio = date("d/m/Y");
@@ -24,4 +25,4 @@ $fecha_inicio = date("d/m/Y");
     </div>   
 </body>
 
-</html>
+</html>*/
